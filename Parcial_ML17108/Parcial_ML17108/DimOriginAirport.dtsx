@@ -1,0 +1,2616 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="10/20/2024 8:12:03 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="ROXANA"
+  DTS:CreatorName="ROXANA\LENOVO"
+  DTS:DTSID="{E19D927B-0666-492C-84E6-B2AFB9A3E060}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="16.0.5556.0"
+  DTS:LocaleID="3082"
+  DTS:ObjectName="DimAirport"
+  DTS:PackageType="5"
+  DTS:VersionBuild="7"
+  DTS:VersionGUID="{3935F7C2-B5A6-47B9-B862-D98D54B48231}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[CSV Airport]"
+      DTS:CreationName="FLATFILE"
+      DTS:Description="Llenado"
+      DTS:DTSID="{69704B74-B95A-41A0-A768-28352A3D9ECA}"
+      DTS:ObjectName="CSV Airport">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="3082"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="C:\Users\LENOVO\Documents\EXAMEN\Combined_Flights_2018.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="FlightDate"
+              DTS:DTSID="{7F84D404-9DAD-4199-94AA-B9B169A83A2B}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Airline"
+              DTS:DTSID="{BB6EA74E-4A2B-4C2F-8710-C27EF45A2F34}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Origin"
+              DTS:DTSID="{D697B990-7BE7-49F6-B962-BA17B3D1D997}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Dest"
+              DTS:DTSID="{1AD59DAC-D1DD-43B9-A781-D9F547F3A74E}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Cancelled"
+              DTS:DTSID="{12E4CC64-26ED-4302-A46C-D2224748FF48}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Diverted"
+              DTS:DTSID="{E7695A01-77A8-4F62-A52A-E9B24BD794CC}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="CRSDepTime"
+              DTS:DTSID="{F3291BE8-AF5C-471C-99BE-B5D70E00023F}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="DepTime"
+              DTS:DTSID="{47EC7E4E-0027-43D1-8B68-D640ABC18665}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="DepDelayMinutes"
+              DTS:DTSID="{07E63858-8505-470F-9088-4FF07EF6039B}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="DepDelay"
+              DTS:DTSID="{B23EC948-E750-4FFA-8C10-F4F02CB9A3FD}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ArrTime"
+              DTS:DTSID="{C3D0DE07-D58B-48C1-81E7-D00D3A184D64}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ArrDelayMinutes"
+              DTS:DTSID="{65026D91-DF6D-474E-A2DE-0CAA4007372D}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="AirTime"
+              DTS:DTSID="{26395340-B781-438F-B796-EA5EF3DACD31}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="CRSElapsedTime"
+              DTS:DTSID="{644D2EBC-287B-4770-8634-A87A2FC9050F}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ActualElapsedTime"
+              DTS:DTSID="{5CF19A25-4026-4AEF-AB02-34FB53D111B3}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Distance"
+              DTS:DTSID="{9B0F73C1-A116-4C09-8D34-D0E0E7DEC037}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Year"
+              DTS:DTSID="{9EB76A41-44CD-4969-AB39-59701D6B67C8}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Quarter"
+              DTS:DTSID="{1A3581F8-FB41-4FB4-AFE5-B334CBB3B54C}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Month"
+              DTS:DTSID="{9D65FF14-0F8D-4E96-8243-D26ADFD8DF67}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="DayofMonth"
+              DTS:DTSID="{17424303-4CD1-4AE4-8E75-833381A20935}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="DayOfWeek"
+              DTS:DTSID="{1934FA59-2A7C-4596-9011-4E2F9DA395BF}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Marketing_Airline_Network"
+              DTS:DTSID="{45CFBB85-085B-4A78-B023-C6E130D21FAC}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Operated_or_Branded_Code_Share_Partners"
+              DTS:DTSID="{7D38FBAE-811D-48F1-9BDD-A19B8B144A99}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="DOT_ID_Marketing_Airline"
+              DTS:DTSID="{B01E21A2-7F30-4FE2-8306-C4A47FC7F23C}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="IATA_Code_Marketing_Airline"
+              DTS:DTSID="{D730475B-FB73-457A-A8BE-ADC57F7593B9}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Flight_Number_Marketing_Airline"
+              DTS:DTSID="{8B3E1A4D-0590-4804-B5C5-ECD5B5E518FE}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Operating_Airline"
+              DTS:DTSID="{6E0F31DA-B73A-4BB6-8F17-ABC997FEE59C}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="DOT_ID_Operating_Airline"
+              DTS:DTSID="{42A7EE4C-5C8A-42BA-ADD1-8F98A97016F9}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="IATA_Code_Operating_Airline"
+              DTS:DTSID="{40175820-4527-4CD1-B471-09801BCCE93B}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Tail_Number"
+              DTS:DTSID="{90C18E58-F942-4F28-B9E2-2F3B73A82307}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Flight_Number_Operating_Airline"
+              DTS:DTSID="{27AA0D78-DF19-42C8-A61B-F37662BEAEC7}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="OriginAirportID"
+              DTS:DTSID="{C0F882EF-830B-4A4A-95B9-8ADA2CF22D65}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="OriginAirportSeqID"
+              DTS:DTSID="{950D4202-1594-47EC-86EA-6BABBD6D3AF0}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="OriginCityMarketID"
+              DTS:DTSID="{908D1C2B-0C02-49B0-9234-B1B41CAFAF5B}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="OriginCityName"
+              DTS:DTSID="{96D1E9B8-A15A-4935-9637-AFA02F130584}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="OriginState"
+              DTS:DTSID="{6107A878-4A75-4D07-929C-3FEF8C601823}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="OriginStateFips"
+              DTS:DTSID="{7F8F1277-B4EA-4A1D-8BC8-ACF17F0F1FAC}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="OriginStateName"
+              DTS:DTSID="{2E48094A-B91C-43C7-8C40-D1B994D84589}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="OriginWac"
+              DTS:DTSID="{4B9655B1-9F86-4DB8-B92A-54C6C7822B84}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="DestAirportID"
+              DTS:DTSID="{126D769E-3869-4EBE-8629-B89EA646F01E}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="DestAirportSeqID"
+              DTS:DTSID="{170D4461-FC4F-44F0-BC1D-037524F12CAC}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="DestCityMarketID"
+              DTS:DTSID="{AE7954B6-AB01-412E-96FF-BB1BC10E0A65}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="DestCityName"
+              DTS:DTSID="{2C0AD144-880F-42D6-8762-9187CD6E9113}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="DestState"
+              DTS:DTSID="{1CB6720C-D274-4311-BF7B-AFDCBD0E50A1}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="DestStateFips"
+              DTS:DTSID="{EB83106F-5095-4683-AE74-FE26F2DFCAE0}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="DestStateName"
+              DTS:DTSID="{9503056E-7A63-4729-BF17-205FE1C89F96}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="DestWac"
+              DTS:DTSID="{E2B9FAA1-A54F-4346-A9EE-51CE0A6CBCDB}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="DepDel15"
+              DTS:DTSID="{008D20FC-8029-4F4E-B1D2-2AB18B13151D}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="DepartureDelayGroups"
+              DTS:DTSID="{24A54B15-061F-4884-A821-D57BEF376253}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="DepTimeBlk"
+              DTS:DTSID="{5D30610D-A841-401D-9987-6CEB0F7C0232}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="TaxiOut"
+              DTS:DTSID="{DF8FBE37-0325-40DE-948B-DEF566E5B179}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="WheelsOff"
+              DTS:DTSID="{C75D3CF3-5AFA-4FFE-B83B-E221E390C0FE}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="WheelsOn"
+              DTS:DTSID="{6755045C-5D69-4418-80D1-5D3F6ABFFE18}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="TaxiIn"
+              DTS:DTSID="{2EF6FC4C-2448-4631-B0D5-17A724461292}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="CRSArrTime"
+              DTS:DTSID="{96BEC5EC-DF9B-471D-99DF-3FDFF2932C3E}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ArrDelay"
+              DTS:DTSID="{15C1273F-3C30-4F70-B00F-DE8ADD8DAA2F}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ArrDel15"
+              DTS:DTSID="{32E6B559-CD60-4293-B7BE-5797B5936E08}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ArrivalDelayGroups"
+              DTS:DTSID="{022AA296-0B3F-4AF4-93F3-ED75B40BE4DD}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ArrTimeBlk"
+              DTS:DTSID="{23F6D930-9A21-468E-A1EC-F93A05CB13FD}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="DistanceGroup"
+              DTS:DTSID="{D6312A71-0D7F-416F-B6C4-89C0C16F5790}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000A_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="DivAirportLandings"
+              DTS:DTSID="{97F7B28F-8CF3-484F-918C-3EDEE1E8139C}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[FlightDW]"
+      DTS:CreationName="ADO.NET:System.Data.SqlClient.SqlConnection, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"
+      DTS:DTSID="{B42A5A44-EBC5-495F-8B50-9A4F1A127AF5}"
+      DTS:ObjectName="FlightDW">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=localhost;User ID=sa;Initial Catalog=FlightDW;Persist Security Info=True;Encrypt=False;Application Name=SSIS-DimFlight-{B42A5A44-EBC5-495F-8B50-9A4F1A127AF5}localhost.FlightDW.sa;">
+          <DTS:Password
+            DTS:Name="Password"
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAN3JHNGq9bkqGlxs4AwYO/wAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAACPLFtZvhPl6AQ35xTRNqBqzZmtz95nUGTaKK6CUG3b9QAAAAAOgAAAAAIAACAAAAD0xFunHcnCI4jwCB1qbwJwHSeRxUeCNINVZHiW97BPgCAAAAA6nWr4pJ/3aTuHQtsMPbUpd7c/v28spD2IuZbAZYelnEAAAAA2N0V/ixH4/J482pTRtBpuFiD4WhMkKis7NADH5BRXDIenj1Tllx7EaIp/3E0bQsac3GWMxS12wpJvEr8V4qyI</DTS:Password>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Llenado DimAirport"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{F86C34B3-42C0-4F1D-8758-9D08CAE387DD}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Llenado DimAirport"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Llenado DimAirport\CSV Airport 2018"
+              componentClassID="Microsoft.FlatFileSource"
+              contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Flat File Source"
+              localeId="3082"
+              name="CSV Airport 2018"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies whether zero-length columns are treated as null."
+                  name="RetainNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of an output column containing the file name. If no name is specified, no output column containing the file name will be generated."
+                  name="FileNameColumnName"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Llenado DimAirport\CSV Airport 2018.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[CSV Airport]"
+                  connectionManagerRefId="Package.ConnectionManagers[CSV Airport]"
+                  name="FlatFileConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Llenado DimAirport\CSV Airport 2018.Outputs[Flat File Source Output]"
+                  name="Flat File Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Llenado DimAirport\CSV Airport 2018.Outputs[Flat File Source Output].Columns[FlightDate]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Llenado DimAirport\CSV Airport 2018.Outputs[Flat File Source Output].ExternalColumns[FlightDate]"
+                      length="50"
+                      lineageId="Package\Llenado DimAirport\CSV Airport 2018.Outputs[Flat File Source Output].Columns[FlightDate]"
+                      name="FlightDate"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Llenado DimAirport\CSV Airport 2018.Outputs[Flat File Source Output].Columns[Airline]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Llenado DimAirport\CSV Airport 2018.Outputs[Flat File Source Output].ExternalColumns[Airline]"
+                      length="50"
+                      lineageId="Package\Llenado DimAirport\CSV Airport 2018.Outputs[Flat File Source Output].Columns[Airline]"
+                      name="Airline"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Llenado DimAirport\CSV Airport 2018.Outputs[Flat File Source Output].Columns[Origin]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Llenado DimAirport\CSV Airport 2018.Outputs[Flat File Source Output].ExternalColumns[Origin]"
+                      length="50"
+                      lineageId="Package\Llenado DimAirport\CSV Airport 2018.Outputs[Flat File Source Output].Columns[Origin]"
+                      name="Origin"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Llenado DimAirport\CSV Airport 2018.Outputs[Flat File Source Output].Columns[Dest]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Llenado DimAirport\CSV Airport 2018.Outputs[Flat File Source Output].ExternalColumns[Dest]"
+                      length="50"
+                      lineageId="Package\Llenado DimAirport\CSV Airport 2018.Outputs[Flat File Source Output].Columns[Dest]"
+                      name="Dest"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Llenado DimAirport\CSV Airport 2018.Outputs[Flat File Source Output].Columns[Cancelled]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Llenado DimAirport\CSV Airport 2018.Outputs[Flat File Source Output].ExternalColumns[Cancelled]"
+                      length="50"
+                      lineageId="Package\Llenado DimAirport\CSV Airport 2018.Outputs[Flat File Source Output].Columns[Cancelled]"
+                      name="Cancelled"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Llenado DimAirport\CSV Airport 2018.Outputs[Flat File Source Output].Columns[Diverted]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Llenado DimAirport\CSV Airport 2018.Outputs[Flat File Source Output].ExternalColumns[Diverted]"
+                      length="50"
+                      lineageId="Package\Llenado DimAirport\CSV Airport 2018.Outputs[Flat File Source Output].Columns[Diverted]"
+                      name="Diverted"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Llenado DimAirport\CSV Airport 2018.Outputs[Flat File Source Output].Columns[CRSDepTime]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Llenado DimAirport\CSV Airport 2018.Outputs[Flat File Source Output].ExternalColumns[CRSDepTime]"
+                      length="50"
+                      lineageId="Package\Llenado DimAirport\CSV Airport 2018.Outputs[Flat File Source Output].Columns[CRSDepTime]"
+                      name="CRSDepTime"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Llenado DimAirport\CSV Airport 2018.Outputs[Flat File Source Output].Columns[DepTime]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Llenado DimAirport\CSV Airport 2018.Outputs[Flat File Source Output].ExternalColumns[DepTime]"
+                      length="50"
+                      lineageId="Package\Llenado DimAirport\CSV Airport 2018.Outputs[Flat File Source Output].Columns[DepTime]"
+                      name="DepTime"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Llenado DimAirport\CSV Airport 2018.Outputs[Flat File Source Output].Columns[DepDelayMinutes]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Llenado DimAirport\CSV Airport 2018.Outputs[Flat File Source Output].ExternalColumns[DepDelayMinutes]"
+                      length="50"
+                      lineageId="Package\Llenado DimAirport\CSV Airport 2018.Outputs[Flat File Source Output].Columns[DepDelayMinutes]"
+                      name="DepDelayMinutes"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Llenado DimAirport\CSV Airport 2018.Outputs[Flat File Source Output].Columns[DepDelay]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Llenado DimAirport\CSV Airport 2018.Outputs[Flat File Source Output].ExternalColumns[DepDelay]"
+                      length="50"
+                      lineageId="Package\Llenado DimAirport\CSV Airport 2018.Outputs[Flat File Source Output].Columns[DepDelay]"
+                      name="DepDelay"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Llenado DimAirport\CSV Airport 2018.Outputs[Flat File Source Output].Columns[ArrTime]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Llenado DimAirport\CSV Airport 2018.Outputs[Flat File Source Output].ExternalColumns[ArrTime]"
+                      length="50"
+                      lineageId="Package\Llenado DimAirport\CSV Airport 2018.Outputs[Flat File Source Output].Columns[ArrTime]"
+                      name="ArrTime"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Llenado DimAirport\CSV Airport 2018.Outputs[Flat File Source Output].Columns[ArrDelayMinutes]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Llenado DimAirport\CSV Airport 2018.Outputs[Flat File Source Output].ExternalColumns[ArrDelayMinutes]"
+                      length="50"
+                      lineageId="Package\Llenado DimAirport\CSV Airport 2018.Outputs[Flat File Source Output].Columns[ArrDelayMinutes]"
+                      name="ArrDelayMinutes"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Llenado DimAirport\CSV Airport 2018.Outputs[Flat File Source Output].Columns[AirTime]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Llenado DimAirport\CSV Airport 2018.Outputs[Flat File Source Output].ExternalColumns[AirTime]"
+                      length="50"
+                      lineageId="Package\Llenado DimAirport\CSV Airport 2018.Outputs[Flat File Source Output].Columns[AirTime]"
+                      name="AirTime"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Llenado DimAirport\CSV Airport 2018.Outputs[Flat File Source Output].Columns[CRSElapsedTime]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Llenado DimAirport\CSV Airport 2018.Outputs[Flat File Source Output].ExternalColumns[CRSElapsedTime]"
+                      length="50"
+                      lineageId="Package\Llenado DimAirport\CSV Airport 2018.Outputs[Flat File Source Output].Columns[CRSElapsedTime]"
+                      name="CRSElapsedTime"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Llenado DimAirport\CSV Airport 2018.Outputs[Flat File Source Output].Columns[ActualElapsedTime]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Llenado DimAirport\CSV Airport 2018.Outputs[Flat File Source Output].ExternalColumns[ActualElapsedTime]"
+                      length="50"
+                      lineageId="Package\Llenado DimAirport\CSV Airport 2018.Outputs[Flat File Source Output].Columns[ActualElapsedTime]"
+                      name="ActualElapsedTime"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Llenado DimAirport\CSV Airport 2018.Outputs[Flat File Source Output].Columns[Distance]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Llenado DimAirport\CSV Airport 2018.Outputs[Flat File Source Output].ExternalColumns[Distance]"
+                      length="50"
+                      lineageId="Package\Llenado DimAirport\CSV Airport 2018.Outputs[Flat File Source Output].Columns[Distance]"
+                      name="Distance"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Llenado DimAirport\CSV Airport 2018.Outputs[Flat File Source Output].Columns[Year]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Llenado DimAirport\CSV Airport 2018.Outputs[Flat File Source Output].ExternalColumns[Year]"
+                      length="50"
+                      lineageId="Package\Llenado DimAirport\CSV Airport 2018.Outputs[Flat File Source Output].Columns[Year]"
+                      name="Year"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Llenado DimAirport\CSV Airport 2018.Outputs[Flat File Source Output].Columns[Quarter]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Llenado DimAirport\CSV Airport 2018.Outputs[Flat File Source Output].ExternalColumns[Quarter]"
+                      length="50"
+                      lineageId="Package\Llenado DimAirport\CSV Airport 2018.Outputs[Flat File Source Output].Columns[Quarter]"
+                      name="Quarter"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Llenado DimAirport\CSV Airport 2018.Outputs[Flat File Source Output].Columns[Month]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Llenado DimAirport\CSV Airport 2018.Outputs[Flat File Source Output].ExternalColumns[Month]"
+                      length="50"
+                      lineageId="Package\Llenado DimAirport\CSV Airport 2018.Outputs[Flat File Source Output].Columns[Month]"
+                      name="Month"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Llenado DimAirport\CSV Airport 2018.Outputs[Flat File Source Output].Columns[DayofMonth]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Llenado DimAirport\CSV Airport 2018.Outputs[Flat File Source Output].ExternalColumns[DayofMonth]"
+                      length="50"
+                      lineageId="Package\Llenado DimAirport\CSV Airport 2018.Outputs[Flat File Source Output].Columns[DayofMonth]"
+                      name="DayofMonth"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Llenado DimAirport\CSV Airport 2018.Outputs[Flat File Source Output].Columns[DayOfWeek]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Llenado DimAirport\CSV Airport 2018.Outputs[Flat File Source Output].ExternalColumns[DayOfWeek]"
+                      length="50"
+                      lineageId="Package\Llenado DimAirport\CSV Airport 2018.Outputs[Flat File Source Output].Columns[DayOfWeek]"
+                      name="DayOfWeek"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Llenado DimAirport\CSV Airport 2018.Outputs[Flat File Source Output].Columns[Marketing_Airline_Network]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Llenado DimAirport\CSV Airport 2018.Outputs[Flat File Source Output].ExternalColumns[Marketing_Airline_Network]"
+                      length="50"
+                      lineageId="Package\Llenado DimAirport\CSV Airport 2018.Outputs[Flat File Source Output].Columns[Marketing_Airline_Network]"
+                      name="Marketing_Airline_Network"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Llenado DimAirport\CSV Airport 2018.Outputs[Flat File Source Output].Columns[Operated_or_Branded_Code_Share_Partners]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Llenado DimAirport\CSV Airport 2018.Outputs[Flat File Source Output].ExternalColumns[Operated_or_Branded_Code_Share_Partners]"
+                      length="50"
+                      lineageId="Package\Llenado DimAirport\CSV Airport 2018.Outputs[Flat File Source Output].Columns[Operated_or_Branded_Code_Share_Partners]"
+                      name="Operated_or_Branded_Code_Share_Partners"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Llenado DimAirport\CSV Airport 2018.Outputs[Flat File Source Output].Columns[DOT_ID_Marketing_Airline]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Llenado DimAirport\CSV Airport 2018.Outputs[Flat File Source Output].ExternalColumns[DOT_ID_Marketing_Airline]"
+                      length="50"
+                      lineageId="Package\Llenado DimAirport\CSV Airport 2018.Outputs[Flat File Source Output].Columns[DOT_ID_Marketing_Airline]"
+                      name="DOT_ID_Marketing_Airline"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Llenado DimAirport\CSV Airport 2018.Outputs[Flat File Source Output].Columns[IATA_Code_Marketing_Airline]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Llenado DimAirport\CSV Airport 2018.Outputs[Flat File Source Output].ExternalColumns[IATA_Code_Marketing_Airline]"
+                      length="50"
+                      lineageId="Package\Llenado DimAirport\CSV Airport 2018.Outputs[Flat File Source Output].Columns[IATA_Code_Marketing_Airline]"
+                      name="IATA_Code_Marketing_Airline"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Llenado DimAirport\CSV Airport 2018.Outputs[Flat File Source Output].Columns[Flight_Number_Marketing_Airline]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Llenado DimAirport\CSV Airport 2018.Outputs[Flat File Source Output].ExternalColumns[Flight_Number_Marketing_Airline]"
+                      length="50"
+                      lineageId="Package\Llenado DimAirport\CSV Airport 2018.Outputs[Flat File Source Output].Columns[Flight_Number_Marketing_Airline]"
+                      name="Flight_Number_Marketing_Airline"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Llenado DimAirport\CSV Airport 2018.Outputs[Flat File Source Output].Columns[Operating_Airline]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Llenado DimAirport\CSV Airport 2018.Outputs[Flat File Source Output].ExternalColumns[Operating_Airline]"
+                      length="50"
+                      lineageId="Package\Llenado DimAirport\CSV Airport 2018.Outputs[Flat File Source Output].Columns[Operating_Airline]"
+                      name="Operating_Airline"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Llenado DimAirport\CSV Airport 2018.Outputs[Flat File Source Output].Columns[DOT_ID_Operating_Airline]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Llenado DimAirport\CSV Airport 2018.Outputs[Flat File Source Output].ExternalColumns[DOT_ID_Operating_Airline]"
+                      length="50"
+                      lineageId="Package\Llenado DimAirport\CSV Airport 2018.Outputs[Flat File Source Output].Columns[DOT_ID_Operating_Airline]"
+                      name="DOT_ID_Operating_Airline"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Llenado DimAirport\CSV Airport 2018.Outputs[Flat File Source Output].Columns[IATA_Code_Operating_Airline]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Llenado DimAirport\CSV Airport 2018.Outputs[Flat File Source Output].ExternalColumns[IATA_Code_Operating_Airline]"
+                      length="50"
+                      lineageId="Package\Llenado DimAirport\CSV Airport 2018.Outputs[Flat File Source Output].Columns[IATA_Code_Operating_Airline]"
+                      name="IATA_Code_Operating_Airline"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Llenado DimAirport\CSV Airport 2018.Outputs[Flat File Source Output].Columns[Tail_Number]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Llenado DimAirport\CSV Airport 2018.Outputs[Flat File Source Output].ExternalColumns[Tail_Number]"
+                      length="50"
+                      lineageId="Package\Llenado DimAirport\CSV Airport 2018.Outputs[Flat File Source Output].Columns[Tail_Number]"
+                      name="Tail_Number"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Llenado DimAirport\CSV Airport 2018.Outputs[Flat File Source Output].Columns[Flight_Number_Operating_Airline]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Llenado DimAirport\CSV Airport 2018.Outputs[Flat File Source Output].ExternalColumns[Flight_Number_Operating_Airline]"
+                      length="50"
+                      lineageId="Package\Llenado DimAirport\CSV Airport 2018.Outputs[Flat File Source Output].Columns[Flight_Number_Operating_Airline]"
+                      name="Flight_Number_Operating_Airline"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Llenado DimAirport\CSV Airport 2018.Outputs[Flat File Source Output].Columns[OriginAirportID]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Llenado DimAirport\CSV Airport 2018.Outputs[Flat File Source Output].ExternalColumns[OriginAirportID]"
+                      length="50"
+                      lineageId="Package\Llenado DimAirport\CSV Airport 2018.Outputs[Flat File Source Output].Columns[OriginAirportID]"
+                      name="OriginAirportID"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Llenado DimAirport\CSV Airport 2018.Outputs[Flat File Source Output].Columns[OriginAirportSeqID]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Llenado DimAirport\CSV Airport 2018.Outputs[Flat File Source Output].ExternalColumns[OriginAirportSeqID]"
+                      length="50"
+                      lineageId="Package\Llenado DimAirport\CSV Airport 2018.Outputs[Flat File Source Output].Columns[OriginAirportSeqID]"
+                      name="OriginAirportSeqID"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Llenado DimAirport\CSV Airport 2018.Outputs[Flat File Source Output].Columns[OriginCityMarketID]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Llenado DimAirport\CSV Airport 2018.Outputs[Flat File Source Output].ExternalColumns[OriginCityMarketID]"
+                      length="50"
+                      lineageId="Package\Llenado DimAirport\CSV Airport 2018.Outputs[Flat File Source Output].Columns[OriginCityMarketID]"
+                      name="OriginCityMarketID"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Llenado DimAirport\CSV Airport 2018.Outputs[Flat File Source Output].Columns[OriginCityName]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Llenado DimAirport\CSV Airport 2018.Outputs[Flat File Source Output].ExternalColumns[OriginCityName]"
+                      length="50"
+                      lineageId="Package\Llenado DimAirport\CSV Airport 2018.Outputs[Flat File Source Output].Columns[OriginCityName]"
+                      name="OriginCityName"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Llenado DimAirport\CSV Airport 2018.Outputs[Flat File Source Output].Columns[OriginState]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Llenado DimAirport\CSV Airport 2018.Outputs[Flat File Source Output].ExternalColumns[OriginState]"
+                      length="50"
+                      lineageId="Package\Llenado DimAirport\CSV Airport 2018.Outputs[Flat File Source Output].Columns[OriginState]"
+                      name="OriginState"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Llenado DimAirport\CSV Airport 2018.Outputs[Flat File Source Output].Columns[OriginStateFips]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Llenado DimAirport\CSV Airport 2018.Outputs[Flat File Source Output].ExternalColumns[OriginStateFips]"
+                      length="50"
+                      lineageId="Package\Llenado DimAirport\CSV Airport 2018.Outputs[Flat File Source Output].Columns[OriginStateFips]"
+                      name="OriginStateFips"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Llenado DimAirport\CSV Airport 2018.Outputs[Flat File Source Output].Columns[OriginStateName]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Llenado DimAirport\CSV Airport 2018.Outputs[Flat File Source Output].ExternalColumns[OriginStateName]"
+                      length="50"
+                      lineageId="Package\Llenado DimAirport\CSV Airport 2018.Outputs[Flat File Source Output].Columns[OriginStateName]"
+                      name="OriginStateName"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Llenado DimAirport\CSV Airport 2018.Outputs[Flat File Source Output].Columns[OriginWac]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Llenado DimAirport\CSV Airport 2018.Outputs[Flat File Source Output].ExternalColumns[OriginWac]"
+                      length="50"
+                      lineageId="Package\Llenado DimAirport\CSV Airport 2018.Outputs[Flat File Source Output].Columns[OriginWac]"
+                      name="OriginWac"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Llenado DimAirport\CSV Airport 2018.Outputs[Flat File Source Output].Columns[DestAirportID]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Llenado DimAirport\CSV Airport 2018.Outputs[Flat File Source Output].ExternalColumns[DestAirportID]"
+                      length="50"
+                      lineageId="Package\Llenado DimAirport\CSV Airport 2018.Outputs[Flat File Source Output].Columns[DestAirportID]"
+                      name="DestAirportID"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Llenado DimAirport\CSV Airport 2018.Outputs[Flat File Source Output].Columns[DestAirportSeqID]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Llenado DimAirport\CSV Airport 2018.Outputs[Flat File Source Output].ExternalColumns[DestAirportSeqID]"
+                      length="50"
+                      lineageId="Package\Llenado DimAirport\CSV Airport 2018.Outputs[Flat File Source Output].Columns[DestAirportSeqID]"
+                      name="DestAirportSeqID"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Llenado DimAirport\CSV Airport 2018.Outputs[Flat File Source Output].Columns[DestCityMarketID]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Llenado DimAirport\CSV Airport 2018.Outputs[Flat File Source Output].ExternalColumns[DestCityMarketID]"
+                      length="50"
+                      lineageId="Package\Llenado DimAirport\CSV Airport 2018.Outputs[Flat File Source Output].Columns[DestCityMarketID]"
+                      name="DestCityMarketID"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Llenado DimAirport\CSV Airport 2018.Outputs[Flat File Source Output].Columns[DestCityName]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Llenado DimAirport\CSV Airport 2018.Outputs[Flat File Source Output].ExternalColumns[DestCityName]"
+                      length="50"
+                      lineageId="Package\Llenado DimAirport\CSV Airport 2018.Outputs[Flat File Source Output].Columns[DestCityName]"
+                      name="DestCityName"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Llenado DimAirport\CSV Airport 2018.Outputs[Flat File Source Output].Columns[DestState]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Llenado DimAirport\CSV Airport 2018.Outputs[Flat File Source Output].ExternalColumns[DestState]"
+                      length="50"
+                      lineageId="Package\Llenado DimAirport\CSV Airport 2018.Outputs[Flat File Source Output].Columns[DestState]"
+                      name="DestState"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Llenado DimAirport\CSV Airport 2018.Outputs[Flat File Source Output].Columns[DestStateFips]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Llenado DimAirport\CSV Airport 2018.Outputs[Flat File Source Output].ExternalColumns[DestStateFips]"
+                      length="50"
+                      lineageId="Package\Llenado DimAirport\CSV Airport 2018.Outputs[Flat File Source Output].Columns[DestStateFips]"
+                      name="DestStateFips"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Llenado DimAirport\CSV Airport 2018.Outputs[Flat File Source Output].Columns[DestStateName]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Llenado DimAirport\CSV Airport 2018.Outputs[Flat File Source Output].ExternalColumns[DestStateName]"
+                      length="50"
+                      lineageId="Package\Llenado DimAirport\CSV Airport 2018.Outputs[Flat File Source Output].Columns[DestStateName]"
+                      name="DestStateName"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Llenado DimAirport\CSV Airport 2018.Outputs[Flat File Source Output].Columns[DestWac]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Llenado DimAirport\CSV Airport 2018.Outputs[Flat File Source Output].ExternalColumns[DestWac]"
+                      length="50"
+                      lineageId="Package\Llenado DimAirport\CSV Airport 2018.Outputs[Flat File Source Output].Columns[DestWac]"
+                      name="DestWac"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Llenado DimAirport\CSV Airport 2018.Outputs[Flat File Source Output].Columns[DepDel15]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Llenado DimAirport\CSV Airport 2018.Outputs[Flat File Source Output].ExternalColumns[DepDel15]"
+                      length="50"
+                      lineageId="Package\Llenado DimAirport\CSV Airport 2018.Outputs[Flat File Source Output].Columns[DepDel15]"
+                      name="DepDel15"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Llenado DimAirport\CSV Airport 2018.Outputs[Flat File Source Output].Columns[DepartureDelayGroups]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Llenado DimAirport\CSV Airport 2018.Outputs[Flat File Source Output].ExternalColumns[DepartureDelayGroups]"
+                      length="50"
+                      lineageId="Package\Llenado DimAirport\CSV Airport 2018.Outputs[Flat File Source Output].Columns[DepartureDelayGroups]"
+                      name="DepartureDelayGroups"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Llenado DimAirport\CSV Airport 2018.Outputs[Flat File Source Output].Columns[DepTimeBlk]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Llenado DimAirport\CSV Airport 2018.Outputs[Flat File Source Output].ExternalColumns[DepTimeBlk]"
+                      length="50"
+                      lineageId="Package\Llenado DimAirport\CSV Airport 2018.Outputs[Flat File Source Output].Columns[DepTimeBlk]"
+                      name="DepTimeBlk"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Llenado DimAirport\CSV Airport 2018.Outputs[Flat File Source Output].Columns[TaxiOut]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Llenado DimAirport\CSV Airport 2018.Outputs[Flat File Source Output].ExternalColumns[TaxiOut]"
+                      length="50"
+                      lineageId="Package\Llenado DimAirport\CSV Airport 2018.Outputs[Flat File Source Output].Columns[TaxiOut]"
+                      name="TaxiOut"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Llenado DimAirport\CSV Airport 2018.Outputs[Flat File Source Output].Columns[WheelsOff]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Llenado DimAirport\CSV Airport 2018.Outputs[Flat File Source Output].ExternalColumns[WheelsOff]"
+                      length="50"
+                      lineageId="Package\Llenado DimAirport\CSV Airport 2018.Outputs[Flat File Source Output].Columns[WheelsOff]"
+                      name="WheelsOff"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Llenado DimAirport\CSV Airport 2018.Outputs[Flat File Source Output].Columns[WheelsOn]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Llenado DimAirport\CSV Airport 2018.Outputs[Flat File Source Output].ExternalColumns[WheelsOn]"
+                      length="50"
+                      lineageId="Package\Llenado DimAirport\CSV Airport 2018.Outputs[Flat File Source Output].Columns[WheelsOn]"
+                      name="WheelsOn"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Llenado DimAirport\CSV Airport 2018.Outputs[Flat File Source Output].Columns[TaxiIn]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Llenado DimAirport\CSV Airport 2018.Outputs[Flat File Source Output].ExternalColumns[TaxiIn]"
+                      length="50"
+                      lineageId="Package\Llenado DimAirport\CSV Airport 2018.Outputs[Flat File Source Output].Columns[TaxiIn]"
+                      name="TaxiIn"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Llenado DimAirport\CSV Airport 2018.Outputs[Flat File Source Output].Columns[CRSArrTime]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Llenado DimAirport\CSV Airport 2018.Outputs[Flat File Source Output].ExternalColumns[CRSArrTime]"
+                      length="50"
+                      lineageId="Package\Llenado DimAirport\CSV Airport 2018.Outputs[Flat File Source Output].Columns[CRSArrTime]"
+                      name="CRSArrTime"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Llenado DimAirport\CSV Airport 2018.Outputs[Flat File Source Output].Columns[ArrDelay]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Llenado DimAirport\CSV Airport 2018.Outputs[Flat File Source Output].ExternalColumns[ArrDelay]"
+                      length="50"
+                      lineageId="Package\Llenado DimAirport\CSV Airport 2018.Outputs[Flat File Source Output].Columns[ArrDelay]"
+                      name="ArrDelay"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Llenado DimAirport\CSV Airport 2018.Outputs[Flat File Source Output].Columns[ArrDel15]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Llenado DimAirport\CSV Airport 2018.Outputs[Flat File Source Output].ExternalColumns[ArrDel15]"
+                      length="50"
+                      lineageId="Package\Llenado DimAirport\CSV Airport 2018.Outputs[Flat File Source Output].Columns[ArrDel15]"
+                      name="ArrDel15"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Llenado DimAirport\CSV Airport 2018.Outputs[Flat File Source Output].Columns[ArrivalDelayGroups]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Llenado DimAirport\CSV Airport 2018.Outputs[Flat File Source Output].ExternalColumns[ArrivalDelayGroups]"
+                      length="50"
+                      lineageId="Package\Llenado DimAirport\CSV Airport 2018.Outputs[Flat File Source Output].Columns[ArrivalDelayGroups]"
+                      name="ArrivalDelayGroups"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Llenado DimAirport\CSV Airport 2018.Outputs[Flat File Source Output].Columns[ArrTimeBlk]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Llenado DimAirport\CSV Airport 2018.Outputs[Flat File Source Output].ExternalColumns[ArrTimeBlk]"
+                      length="50"
+                      lineageId="Package\Llenado DimAirport\CSV Airport 2018.Outputs[Flat File Source Output].Columns[ArrTimeBlk]"
+                      name="ArrTimeBlk"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Llenado DimAirport\CSV Airport 2018.Outputs[Flat File Source Output].Columns[DistanceGroup]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Llenado DimAirport\CSV Airport 2018.Outputs[Flat File Source Output].ExternalColumns[DistanceGroup]"
+                      length="50"
+                      lineageId="Package\Llenado DimAirport\CSV Airport 2018.Outputs[Flat File Source Output].Columns[DistanceGroup]"
+                      name="DistanceGroup"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Llenado DimAirport\CSV Airport 2018.Outputs[Flat File Source Output].Columns[DivAirportLandings]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Llenado DimAirport\CSV Airport 2018.Outputs[Flat File Source Output].ExternalColumns[DivAirportLandings]"
+                      length="50"
+                      lineageId="Package\Llenado DimAirport\CSV Airport 2018.Outputs[Flat File Source Output].Columns[DivAirportLandings]"
+                      name="DivAirportLandings"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Llenado DimAirport\CSV Airport 2018.Outputs[Flat File Source Output].ExternalColumns[FlightDate]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="FlightDate" />
+                    <externalMetadataColumn
+                      refId="Package\Llenado DimAirport\CSV Airport 2018.Outputs[Flat File Source Output].ExternalColumns[Airline]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Airline" />
+                    <externalMetadataColumn
+                      refId="Package\Llenado DimAirport\CSV Airport 2018.Outputs[Flat File Source Output].ExternalColumns[Origin]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Origin" />
+                    <externalMetadataColumn
+                      refId="Package\Llenado DimAirport\CSV Airport 2018.Outputs[Flat File Source Output].ExternalColumns[Dest]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Dest" />
+                    <externalMetadataColumn
+                      refId="Package\Llenado DimAirport\CSV Airport 2018.Outputs[Flat File Source Output].ExternalColumns[Cancelled]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Cancelled" />
+                    <externalMetadataColumn
+                      refId="Package\Llenado DimAirport\CSV Airport 2018.Outputs[Flat File Source Output].ExternalColumns[Diverted]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Diverted" />
+                    <externalMetadataColumn
+                      refId="Package\Llenado DimAirport\CSV Airport 2018.Outputs[Flat File Source Output].ExternalColumns[CRSDepTime]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="CRSDepTime" />
+                    <externalMetadataColumn
+                      refId="Package\Llenado DimAirport\CSV Airport 2018.Outputs[Flat File Source Output].ExternalColumns[DepTime]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="DepTime" />
+                    <externalMetadataColumn
+                      refId="Package\Llenado DimAirport\CSV Airport 2018.Outputs[Flat File Source Output].ExternalColumns[DepDelayMinutes]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="DepDelayMinutes" />
+                    <externalMetadataColumn
+                      refId="Package\Llenado DimAirport\CSV Airport 2018.Outputs[Flat File Source Output].ExternalColumns[DepDelay]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="DepDelay" />
+                    <externalMetadataColumn
+                      refId="Package\Llenado DimAirport\CSV Airport 2018.Outputs[Flat File Source Output].ExternalColumns[ArrTime]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="ArrTime" />
+                    <externalMetadataColumn
+                      refId="Package\Llenado DimAirport\CSV Airport 2018.Outputs[Flat File Source Output].ExternalColumns[ArrDelayMinutes]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="ArrDelayMinutes" />
+                    <externalMetadataColumn
+                      refId="Package\Llenado DimAirport\CSV Airport 2018.Outputs[Flat File Source Output].ExternalColumns[AirTime]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="AirTime" />
+                    <externalMetadataColumn
+                      refId="Package\Llenado DimAirport\CSV Airport 2018.Outputs[Flat File Source Output].ExternalColumns[CRSElapsedTime]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="CRSElapsedTime" />
+                    <externalMetadataColumn
+                      refId="Package\Llenado DimAirport\CSV Airport 2018.Outputs[Flat File Source Output].ExternalColumns[ActualElapsedTime]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="ActualElapsedTime" />
+                    <externalMetadataColumn
+                      refId="Package\Llenado DimAirport\CSV Airport 2018.Outputs[Flat File Source Output].ExternalColumns[Distance]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Distance" />
+                    <externalMetadataColumn
+                      refId="Package\Llenado DimAirport\CSV Airport 2018.Outputs[Flat File Source Output].ExternalColumns[Year]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Year" />
+                    <externalMetadataColumn
+                      refId="Package\Llenado DimAirport\CSV Airport 2018.Outputs[Flat File Source Output].ExternalColumns[Quarter]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Quarter" />
+                    <externalMetadataColumn
+                      refId="Package\Llenado DimAirport\CSV Airport 2018.Outputs[Flat File Source Output].ExternalColumns[Month]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Month" />
+                    <externalMetadataColumn
+                      refId="Package\Llenado DimAirport\CSV Airport 2018.Outputs[Flat File Source Output].ExternalColumns[DayofMonth]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="DayofMonth" />
+                    <externalMetadataColumn
+                      refId="Package\Llenado DimAirport\CSV Airport 2018.Outputs[Flat File Source Output].ExternalColumns[DayOfWeek]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="DayOfWeek" />
+                    <externalMetadataColumn
+                      refId="Package\Llenado DimAirport\CSV Airport 2018.Outputs[Flat File Source Output].ExternalColumns[Marketing_Airline_Network]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Marketing_Airline_Network" />
+                    <externalMetadataColumn
+                      refId="Package\Llenado DimAirport\CSV Airport 2018.Outputs[Flat File Source Output].ExternalColumns[Operated_or_Branded_Code_Share_Partners]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Operated_or_Branded_Code_Share_Partners" />
+                    <externalMetadataColumn
+                      refId="Package\Llenado DimAirport\CSV Airport 2018.Outputs[Flat File Source Output].ExternalColumns[DOT_ID_Marketing_Airline]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="DOT_ID_Marketing_Airline" />
+                    <externalMetadataColumn
+                      refId="Package\Llenado DimAirport\CSV Airport 2018.Outputs[Flat File Source Output].ExternalColumns[IATA_Code_Marketing_Airline]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="IATA_Code_Marketing_Airline" />
+                    <externalMetadataColumn
+                      refId="Package\Llenado DimAirport\CSV Airport 2018.Outputs[Flat File Source Output].ExternalColumns[Flight_Number_Marketing_Airline]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Flight_Number_Marketing_Airline" />
+                    <externalMetadataColumn
+                      refId="Package\Llenado DimAirport\CSV Airport 2018.Outputs[Flat File Source Output].ExternalColumns[Operating_Airline]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Operating_Airline" />
+                    <externalMetadataColumn
+                      refId="Package\Llenado DimAirport\CSV Airport 2018.Outputs[Flat File Source Output].ExternalColumns[DOT_ID_Operating_Airline]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="DOT_ID_Operating_Airline" />
+                    <externalMetadataColumn
+                      refId="Package\Llenado DimAirport\CSV Airport 2018.Outputs[Flat File Source Output].ExternalColumns[IATA_Code_Operating_Airline]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="IATA_Code_Operating_Airline" />
+                    <externalMetadataColumn
+                      refId="Package\Llenado DimAirport\CSV Airport 2018.Outputs[Flat File Source Output].ExternalColumns[Tail_Number]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Tail_Number" />
+                    <externalMetadataColumn
+                      refId="Package\Llenado DimAirport\CSV Airport 2018.Outputs[Flat File Source Output].ExternalColumns[Flight_Number_Operating_Airline]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Flight_Number_Operating_Airline" />
+                    <externalMetadataColumn
+                      refId="Package\Llenado DimAirport\CSV Airport 2018.Outputs[Flat File Source Output].ExternalColumns[OriginAirportID]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="OriginAirportID" />
+                    <externalMetadataColumn
+                      refId="Package\Llenado DimAirport\CSV Airport 2018.Outputs[Flat File Source Output].ExternalColumns[OriginAirportSeqID]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="OriginAirportSeqID" />
+                    <externalMetadataColumn
+                      refId="Package\Llenado DimAirport\CSV Airport 2018.Outputs[Flat File Source Output].ExternalColumns[OriginCityMarketID]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="OriginCityMarketID" />
+                    <externalMetadataColumn
+                      refId="Package\Llenado DimAirport\CSV Airport 2018.Outputs[Flat File Source Output].ExternalColumns[OriginCityName]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="OriginCityName" />
+                    <externalMetadataColumn
+                      refId="Package\Llenado DimAirport\CSV Airport 2018.Outputs[Flat File Source Output].ExternalColumns[OriginState]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="OriginState" />
+                    <externalMetadataColumn
+                      refId="Package\Llenado DimAirport\CSV Airport 2018.Outputs[Flat File Source Output].ExternalColumns[OriginStateFips]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="OriginStateFips" />
+                    <externalMetadataColumn
+                      refId="Package\Llenado DimAirport\CSV Airport 2018.Outputs[Flat File Source Output].ExternalColumns[OriginStateName]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="OriginStateName" />
+                    <externalMetadataColumn
+                      refId="Package\Llenado DimAirport\CSV Airport 2018.Outputs[Flat File Source Output].ExternalColumns[OriginWac]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="OriginWac" />
+                    <externalMetadataColumn
+                      refId="Package\Llenado DimAirport\CSV Airport 2018.Outputs[Flat File Source Output].ExternalColumns[DestAirportID]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="DestAirportID" />
+                    <externalMetadataColumn
+                      refId="Package\Llenado DimAirport\CSV Airport 2018.Outputs[Flat File Source Output].ExternalColumns[DestAirportSeqID]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="DestAirportSeqID" />
+                    <externalMetadataColumn
+                      refId="Package\Llenado DimAirport\CSV Airport 2018.Outputs[Flat File Source Output].ExternalColumns[DestCityMarketID]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="DestCityMarketID" />
+                    <externalMetadataColumn
+                      refId="Package\Llenado DimAirport\CSV Airport 2018.Outputs[Flat File Source Output].ExternalColumns[DestCityName]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="DestCityName" />
+                    <externalMetadataColumn
+                      refId="Package\Llenado DimAirport\CSV Airport 2018.Outputs[Flat File Source Output].ExternalColumns[DestState]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="DestState" />
+                    <externalMetadataColumn
+                      refId="Package\Llenado DimAirport\CSV Airport 2018.Outputs[Flat File Source Output].ExternalColumns[DestStateFips]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="DestStateFips" />
+                    <externalMetadataColumn
+                      refId="Package\Llenado DimAirport\CSV Airport 2018.Outputs[Flat File Source Output].ExternalColumns[DestStateName]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="DestStateName" />
+                    <externalMetadataColumn
+                      refId="Package\Llenado DimAirport\CSV Airport 2018.Outputs[Flat File Source Output].ExternalColumns[DestWac]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="DestWac" />
+                    <externalMetadataColumn
+                      refId="Package\Llenado DimAirport\CSV Airport 2018.Outputs[Flat File Source Output].ExternalColumns[DepDel15]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="DepDel15" />
+                    <externalMetadataColumn
+                      refId="Package\Llenado DimAirport\CSV Airport 2018.Outputs[Flat File Source Output].ExternalColumns[DepartureDelayGroups]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="DepartureDelayGroups" />
+                    <externalMetadataColumn
+                      refId="Package\Llenado DimAirport\CSV Airport 2018.Outputs[Flat File Source Output].ExternalColumns[DepTimeBlk]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="DepTimeBlk" />
+                    <externalMetadataColumn
+                      refId="Package\Llenado DimAirport\CSV Airport 2018.Outputs[Flat File Source Output].ExternalColumns[TaxiOut]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="TaxiOut" />
+                    <externalMetadataColumn
+                      refId="Package\Llenado DimAirport\CSV Airport 2018.Outputs[Flat File Source Output].ExternalColumns[WheelsOff]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="WheelsOff" />
+                    <externalMetadataColumn
+                      refId="Package\Llenado DimAirport\CSV Airport 2018.Outputs[Flat File Source Output].ExternalColumns[WheelsOn]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="WheelsOn" />
+                    <externalMetadataColumn
+                      refId="Package\Llenado DimAirport\CSV Airport 2018.Outputs[Flat File Source Output].ExternalColumns[TaxiIn]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="TaxiIn" />
+                    <externalMetadataColumn
+                      refId="Package\Llenado DimAirport\CSV Airport 2018.Outputs[Flat File Source Output].ExternalColumns[CRSArrTime]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="CRSArrTime" />
+                    <externalMetadataColumn
+                      refId="Package\Llenado DimAirport\CSV Airport 2018.Outputs[Flat File Source Output].ExternalColumns[ArrDelay]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="ArrDelay" />
+                    <externalMetadataColumn
+                      refId="Package\Llenado DimAirport\CSV Airport 2018.Outputs[Flat File Source Output].ExternalColumns[ArrDel15]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="ArrDel15" />
+                    <externalMetadataColumn
+                      refId="Package\Llenado DimAirport\CSV Airport 2018.Outputs[Flat File Source Output].ExternalColumns[ArrivalDelayGroups]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="ArrivalDelayGroups" />
+                    <externalMetadataColumn
+                      refId="Package\Llenado DimAirport\CSV Airport 2018.Outputs[Flat File Source Output].ExternalColumns[ArrTimeBlk]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="ArrTimeBlk" />
+                    <externalMetadataColumn
+                      refId="Package\Llenado DimAirport\CSV Airport 2018.Outputs[Flat File Source Output].ExternalColumns[DistanceGroup]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="DistanceGroup" />
+                    <externalMetadataColumn
+                      refId="Package\Llenado DimAirport\CSV Airport 2018.Outputs[Flat File Source Output].ExternalColumns[DivAirportLandings]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="DivAirportLandings" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Llenado DimAirport\CSV Airport 2018.Outputs[Flat File Source Error Output]"
+                  isErrorOut="true"
+                  name="Flat File Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Llenado DimAirport\CSV Airport 2018.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      codePage="1252"
+                      dataType="text"
+                      description="Flat File Source Error Output Column"
+                      lineageId="Package\Llenado DimAirport\CSV Airport 2018.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      name="Flat File Source Error Output Column" />
+                    <outputColumn
+                      refId="Package\Llenado DimAirport\CSV Airport 2018.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Llenado DimAirport\CSV Airport 2018.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Llenado DimAirport\CSV Airport 2018.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Llenado DimAirport\CSV Airport 2018.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Llenado DimAirport\Llenado DimAirport"
+              componentClassID="Microsoft.ManagedComponentHost"
+              contactInfo="Carga datos en una base de datos compatible con ADO.NET que use una vista o tabla de base de datos. Se cargan datos en una tabla nueva o existente. Por ejemplo, se usa un proveedor ADO.NET para ODBC para cargar datos en un destino ODBC.;Microsoft Corporation; Microsoft SQL Server; © Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;2"
+              description="Carga datos en una base de datos compatible con ADO.NET que use una vista o tabla de base de datos. Se cargan datos en una tabla nueva o existente. Por ejemplo, se usa un proveedor ADO.NET para ODBC para cargar datos en un destino ODBC."
+              name="Llenado DimAirport"
+              usesDispositions="true"
+              version="2">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Nombre de la tabla de la base de datos de destino."
+                  expressionType="Notify"
+                  name="TableOrViewName"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifique el número de filas por lote. El valor predeterminado es 0, que utiliza el mismo tamaño que el búfer interno de SSIS. "
+                  expressionType="Notify"
+                  name="BatchSize">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Número de segundos antes de que se agote el tiempo de espera de un comando. Un valor de 0 indica un tiempo de espera infinito. "
+                  expressionType="Notify"
+                  name="CommandTimeout">30</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Especifica si se debe usar la interfaz SqlBulkCopy para mejorar el rendimiento de las operaciones de inserción masiva. No todos los proveedores admiten esta interfaz."
+                  expressionType="Notify"
+                  name="UseBulkInsertWhenPossible">true</property>
+                <property
+                  dataType="System.String"
+                  name="UserComponentTypeName">Microsoft.ADONETDestination</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Llenado DimAirport\Llenado DimAirport.Connections[IDbConnection]"
+                  description="Administrador de conexiones administrado"
+                  name="IDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Llenado DimAirport\Llenado DimAirport.Inputs[Entrada de destino de ADO NET]"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="Entrada de destino de ADO NET">
+                  <externalMetadataColumns
+                    isUsed="True" />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Llenado DimAirport\Llenado DimAirport.Outputs[Salida de error de destino de ADO NET]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Salida de error de destino de ADO NET"
+                  synchronousInputId="Package\Llenado DimAirport\Llenado DimAirport.Inputs[Entrada de destino de ADO NET]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Llenado DimAirport\Llenado DimAirport.Outputs[Salida de error de destino de ADO NET].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Llenado DimAirport\Llenado DimAirport.Outputs[Salida de error de destino de ADO NET].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Llenado DimAirport\Llenado DimAirport.Outputs[Salida de error de destino de ADO NET].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Llenado DimAirport\Llenado DimAirport.Outputs[Salida de error de destino de ADO NET].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Llenado DimAirport.Paths[Flat File Source Output]"
+              endId="Package\Llenado DimAirport\Llenado DimAirport.Inputs[Entrada de destino de ADO NET]"
+              name="Flat File Source Output"
+              startId="Package\Llenado DimAirport\CSV Airport 2018.Outputs[Flat File Source Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Tarea Ejecutar SQL"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Tarea Ejecutar SQL"
+      DTS:DTSID="{BF3D75BD-D271-439A-9A03-FBE7FAE768C0}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Tarea Ejecutar SQL"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{B42A5A44-EBC5-495F-8B50-9A4F1A127AF5}"
+          SQLTask:SqlStatementSource="--Limpiamos la dimension&#xA;&#xA;delete DimAirport;&#xA;&#xA;--Reiniciamos la clave autonumerica&#xA;dbcc checkident('DimAirport',RESEED,0)" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:PrecedenceConstraints>
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Restricción]"
+      DTS:CreationName=""
+      DTS:DTSID="{7D3E666A-5FF0-4D50-9711-281F6D3BCA9E}"
+      DTS:From="Package\Tarea Ejecutar SQL"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Restricción"
+      DTS:To="Package\Llenado DimAirport" />
+  </DTS:PrecedenceConstraints>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--Esta sección CDATA contiene la información de diseño del paquete. Esta sección incluye información como, por ejemplo, las coordenadas (x,y), el ancho y el alto.-->
+<!--Si edita manualmente esta sección y comete un error, puede eliminarlo. -->
+<!--El paquete podrá cargarse normalmente, pero se perderá la información de diseño anterior y el diseñador reorganizará los elementos automáticamente en la superficie de diseño.-->
+<Objects
+  Version="8">
+  <!--Cada uno de los nodos siguientes contiene propiedades que no afectan al comportamiento en tiempo de ejecución.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="170.666666666667,42.6666666666667"
+          Id="Package\Llenado DimAirport"
+          TopLeft="170.624992372468,102.631577820494" />
+        <NodeLayout
+          Size="173.333333333334,42.6666666666667"
+          Id="Package\Tarea Ejecutar SQL"
+          TopLeft="108.624995389953,6.86842103760661" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Restricción]"
+          TopLeft="195.29166205662,49.5350877042733">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="60.6666636491809,53.0964901162207"
+              Start="0,0"
+              End="60.6666636491809,45.5964901162207">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,22.5482450581103" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,22.5482450581103"
+                    Point2="0,26.5482450581103"
+                    Point3="4,26.5482450581103" />
+                  <mssgle:LineSegment
+                    End="56.6666636491809,26.5482450581103" />
+                  <mssgle:CubicBezierSegment
+                    Point1="56.6666636491809,26.5482450581103"
+                    Point2="60.6666636491809,26.5482450581103"
+                    Point3="60.6666636491809,30.5482450581103" />
+                  <mssgle:LineSegment
+                    End="60.6666636491809,45.5964901162207" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\Llenado DimAirport">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="162.666666666667,42.6666666666667"
+          Id="Package\Llenado DimAirport\CSV Airport 2018"
+          TopLeft="106.874995222315,2.73684207521318" />
+        <NodeLayout
+          Size="170.666666666667,42.6666666666667"
+          Id="Package\Llenado DimAirport\Llenado DimAirport"
+          TopLeft="124.999994412065,99.2105252264775" />
+        <EdgeLayout
+          Id="Package\Llenado DimAirport.Paths[Flat File Source Output]"
+          TopLeft="188.208328555648,45.4035087418798">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="22.12499918975,53.8070164845977"
+              Start="0,0"
+              End="22.12499918975,46.3070164845977">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,22.9035082422988" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,22.9035082422988"
+                    Point2="0,26.9035082422988"
+                    Point3="4,26.9035082422988" />
+                  <mssgle:LineSegment
+                    End="18.12499918975,26.9035082422988" />
+                  <mssgle:CubicBezierSegment
+                    Point1="18.12499918975,26.9035082422988"
+                    Point2="22.12499918975,26.9035082422988"
+                    Point3="22.12499918975,30.9035082422988" />
+                  <mssgle:LineSegment
+                    End="22.12499918975,46.3070164845977" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>

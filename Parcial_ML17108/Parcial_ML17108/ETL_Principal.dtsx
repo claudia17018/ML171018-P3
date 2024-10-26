@@ -1,0 +1,203 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="10/19/2024 10:11:03 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="ROXANA"
+  DTS:CreatorName="ROXANA\LENOVO"
+  DTS:DTSID="{EFC62270-BAC6-4B06-B944-AF862BABE368}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="16.0.5556.0"
+  DTS:LocaleID="3082"
+  DTS:ObjectName="ETL_Principal"
+  DTS:PackageType="5"
+  DTS:VersionBuild="3"
+  DTS:VersionGUID="{98044271-B9DB-4971-939C-F7CB2713B268}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[FlightDW_ML17018]"
+      DTS:CreationName="ADO.NET:System.Data.SqlClient.SqlConnection, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"
+      DTS:DTSID="{DFCCDCD1-DC5C-4962-969F-CBE9E5A4F831}"
+      DTS:ObjectName="FlightDW_ML17018">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=localhost;User ID=sa;Initial Catalog=FlightDW;Persist Security Info=True;Encrypt=False;Application Name=SSIS-ETL_Principal-{DFCCDCD1-DC5C-4962-969F-CBE9E5A4F831}localhost.FlightDW.sa;">
+          <DTS:Password
+            DTS:Name="Password"
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAN3JHNGq9bkqGlxs4AwYO/wAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAACaMyTMmQCZsmP22in0G25oPYtyJwoKRfRVhhiReu5WxwAAAAAOgAAAAAIAACAAAABwiTV87Boc2kEq/gT+YQtHVOgzMrUJo2QspZSzCLkHcyAAAACklM2MAuZth7yurzc4fvu1DgGMDcPs0cad3P8Ef5EdMkAAAABcglw15U+YzngWFRMIBwwTd3LuP6UZmh8D7NCr1BPLoExF6ZR55HtTm6zdVGcNxAACtudJwUwDPvLR7B+Z50IY</DTS:Password>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\DimAirline"
+      DTS:CreationName="Microsoft.ExecutePackageTask"
+      DTS:Description="Execute Package Task"
+      DTS:DTSID="{8169A15C-3DC3-4BDA-8286-50B12EA02471}"
+      DTS:ExecutableType="Microsoft.ExecutePackageTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="DimAirline"
+      DTS:TaskContact="Microsoft Corporation; Microsoft SQL Server; Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <ExecutePackageTask>
+          <UseProjectReference>True</UseProjectReference>
+          <PackageName>DimAirline.dtsx</PackageName>
+        </ExecutePackageTask>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\FactFlight"
+      DTS:CreationName="Microsoft.ExecutePackageTask"
+      DTS:Description="Execute Package Task"
+      DTS:DTSID="{8E967015-3E62-47D4-892D-CC7833D5B2DC}"
+      DTS:ExecutableType="Microsoft.ExecutePackageTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="FactFlight"
+      DTS:TaskContact="Microsoft Corporation; Microsoft SQL Server; Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <ExecutePackageTask>
+          <UseProjectReference>True</UseProjectReference>
+          <PackageName>FactFlight.dtsx</PackageName>
+        </ExecutePackageTask>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Limpiar Fact Table"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Tarea Ejecutar SQL"
+      DTS:DTSID="{77E24FCC-5E32-4D40-AAE4-A89B8258AF55}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Limpiar Fact Table"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{DFCCDCD1-DC5C-4962-969F-CBE9E5A4F831}"
+          SQLTask:SqlStatementSource="delete FactFlight" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:PrecedenceConstraints>
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Restricción]"
+      DTS:CreationName=""
+      DTS:DTSID="{EC70ECFC-5BC6-42EA-BA5C-D687ED146C0C}"
+      DTS:From="Package\Limpiar Fact Table"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Restricción"
+      DTS:To="Package\DimAirline" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Restricción 1]"
+      DTS:CreationName=""
+      DTS:DTSID="{D09F0A54-E141-44BD-9FB3-2ED4C215A0E5}"
+      DTS:From="Package\DimAirline"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Restricción 1"
+      DTS:To="Package\FactFlight" />
+  </DTS:PrecedenceConstraints>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--Esta sección CDATA contiene la información de diseño del paquete. Esta sección incluye información como, por ejemplo, las coordenadas (x,y), el ancho y el alto.-->
+<!--Si edita manualmente esta sección y comete un error, puede eliminarlo. -->
+<!--El paquete podrá cargarse normalmente, pero se perderá la información de diseño anterior y el diseñador reorganizará los elementos automáticamente en la superficie de diseño.-->
+<Objects
+  Version="8">
+  <!--Cada uno de los nodos siguientes contiene propiedades que no afectan al comportamiento en tiempo de ejecución.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="128,42.6666666666667"
+          Id="Package\DimAirline"
+          TopLeft="181.249991897494,83.4736832940017" />
+        <NodeLayout
+          Size="168,42.6666666666667"
+          Id="Package\Limpiar Fact Table"
+          TopLeft="15.6249993015081,10.6491228145301" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Restricción]"
+          TopLeft="99.6249993015081,53.3157894811967">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="145.624992595986,30.157893812805"
+              Start="0,0"
+              End="145.624992595986,22.657893812805">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,11.0789469064025" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,11.0789469064025"
+                    Point2="0,15.0789469064025"
+                    Point3="4,15.0789469064025" />
+                  <mssgle:LineSegment
+                    End="141.624992595986,15.0789469064025" />
+                  <mssgle:CubicBezierSegment
+                    Point1="141.624992595986,15.0789469064025"
+                    Point2="145.624992595986,15.0789469064025"
+                    Point3="145.624992595986,19.0789469064025" />
+                  <mssgle:LineSegment
+                    End="145.624992595986,22.657893812805" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="126.666666666667,42.6666666666667"
+          Id="Package\FactFlight"
+          TopLeft="371.874983375893,149.157893099118" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Restricción 1]"
+          TopLeft="245.249991897494,126.140349960668">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="189.958324811732,23.0175431384495"
+              Start="0,0"
+              End="189.958324811732,15.5175431384495">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,7.50877156922475" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,7.50877156922475"
+                    Point2="0,11.5087715692247"
+                    Point3="4,11.5087715692247" />
+                  <mssgle:LineSegment
+                    End="185.958324811732,11.5087715692247" />
+                  <mssgle:CubicBezierSegment
+                    Point1="185.958324811732,11.5087715692247"
+                    Point2="189.958324811732,11.5087715692247"
+                    Point3="189.958324811732,15.5087715692247" />
+                  <mssgle:LineSegment
+                    End="189.958324811732,15.5175431384495" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>
